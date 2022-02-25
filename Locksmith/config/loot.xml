@@ -1,0 +1,7 @@
+<locksmith>
+	<append xpath="/lootcontainers">
+		<lootcontainer id="666" name="secureDoorContainer" count="0" size="1,1" destroy_on_close="false" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualBaseTemplate">
+			<item name="cobweb" count="0" prob="0.01" />
+		</lootcontainer>
+	</append>
+</locksmith>

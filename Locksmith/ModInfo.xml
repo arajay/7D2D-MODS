@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="Locksmith" />
+		<Description value="Enables lockpicking on locked doors. Inspired by Su1C1daL's A18 lockpicking mod but re-written from scratch." />
+		<Author value="Arajay" />
+		<Version value="0.3" compat="A20.2" />
+		<!-- <Website value="https://www.nexusmods.com" /> -->
+	</ModInfo>
+</xml>
