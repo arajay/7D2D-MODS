@@ -4,3 +4,4 @@ Mods for the game 7 Days to Die that I've created in order to improve and enhanc
 ## Massive Hordes
 ## More Zombies
 ## Locksmith
+## Loot Vending Machines
