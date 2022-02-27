@@ -1,0 +1,16 @@
+<config>
+	<append xpath="/lootcontainers">
+		<!-- vending machine custom lootlist -->
+		<lootgroup name="groupVendingMachine" count="all">
+			<item name="oldCash" count="5,10" loot_prob_template="medHigh" />
+			<item name="casinoCoin" count="5,25" loot_prob_template="med" />
+			<item name="drinkJarPureMineralWater" count="1,3" loot_prob_template="medLow" />
+			<item name="drinkCanMegaCrush" count="1,3" loot_prob_template="medLow" />
+			<item group="foodCandy" count="1,4" loot_prob_template="low" />
+		</lootgroup>
+		<!-- add brokenVendingMachine lootcontainer -->
+		<lootcontainer id="420" name="brokenVendingMachine" size="2,8" open_time="2" sound_open="open_vending" sound_close="close_vending" loot_quality_template="qualBaseTemplate">
+			<item group="groupVendingMachine" />
+		</lootcontainer>
+	</append>
+</config>
