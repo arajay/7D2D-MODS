@@ -427,12 +427,6 @@
 			<property name="LockPickBreakChance" value="0.65" />
 			<property name="LootList" value="secureDoorContainer" />
 			<property name="Tags" value="safes,door" />
-			<!--
-			TODO: add support for vault doors?
-			<property class="UpgradeBlock">
-			<property name="ToBlock" value="vaultDoor01" />
-			</property>
-			-->
 			<property name="DowngradeBlock" value="insecureIronDoor1_v3" />
 		</block>
 		<block name="commercialDoor1_v2">
@@ -689,7 +683,7 @@
 			<property name="DowngradeBlock" value="insecureCommercialDoor1_v1" />
 		</block>
 		<block name="insecureCommercialDoor1_v3">
-			<property name="Extends" value="ommercialDoor1_v3_default" />
+			<property name="Extends" value="commercialDoor1_v3_default" />
 			<property name="DescriptionKey" value="doorGroupDesc" />
 			<property name="Class" value="Door" />
 			<property name="DowngradeBlock" value="insecureCommercialDoor1_v2" />
