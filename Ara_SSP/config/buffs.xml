@@ -1,0 +1,6 @@
+<config>
+	<!-- remove newbieCoat at level 1 -->
+	<set xpath="/buffs/buff[@name='buffNewbieCoat']/effect_group/triggered_effect[@action='RemoveBuff']/requirement[@name='PlayerLevel']/@value">
+		0
+	</set>
+</config>

@@ -1,0 +1,39 @@
+<configs>
+	<!-- more zombie diversity -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="zombieFemaleFat" prob="0.3" />
+		<entity name="zombieFatCop" prob="0.1" />
+		<entity name="zombieLab" prob="0.3" />
+		<entity name="zombieMaleHazmat" prob="0.2" />
+		<entity name="zombieSoldier" prob="0.1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="zombieFemaleFat" prob="0.3" />
+		<entity name="zombieFatCop" prob="0.1" />
+		<entity name="zombieJanitor" prob="0.2" />
+		<entity name="zombieJanitorFeral" prob="0.1" />
+		<entity name="zombieLab" prob="0.2" />
+		<entity name="zombieMaleHazmat" prob="0.1" />
+		<entity name="zombiePartyGirl" prob="0.2" />
+		<entity name="zombiePartyGirlFeral" prob="0.1" />
+		<entity name="zombieSkateboarder" prob="0.2" />
+		<entity name="zombieSkateboarderFeral" prob="0.1" />
+		<entity name="zombieSoldier" prob="0.1" />
+	</append>
+	<!-- add vultures to more biomes -->
+	<remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']/entity[@name='none']" />
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
+		<entity name="animalZombieVulture" prob="5" />
+		<entity name="none" prob="80" />
+	</append>
+	<remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']/entity[@name='none']" />
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">
+		<entity name="animalZombieVulture" prob="5" />
+		<entity name="none" prob="80" />
+	</append>
+	<remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']/entity[@name='none']" />
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
+		<entity name="animalZombieVulture" prob="5" />
+		<entity name="none" prob="50" />
+	</append>
+</configs>

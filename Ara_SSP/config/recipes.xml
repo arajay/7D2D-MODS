@@ -1,0 +1,53 @@
+<config>
+	<!-- vehicle wheels use scrap tires and glue instead of acid/coal/oil -->
+	<remove xpath="/recipes/recipe[@name='vehicleWheels']/ingredient[@name='resourceAcid']" />
+	<remove xpath="/recipes/recipe[@name='vehicleWheels']/ingredient[@name='resourceCoal']" />
+	<remove xpath="/recipes/recipe[@name='vehicleWheels']/ingredient[@name='resourceOil']" />
+	<set xpath="/recipes/recipe[@name='vehicleWheels']/ingredient[@name='resourceScrapPolymers']/@count">
+		32
+	</set>
+	<append xpath="/recipes/recipe[@name='vehicleWheels']">
+		<ingredient name="decoCarTireSmallFlat" count="1" />
+		<ingredient name="resourceGlue" count="10" />
+	</append>
+	<set xpath="/recipes/recipe[@name='vehicleWheels']/effect_group/passive_effect[@name='CraftingIngredientCount']/@tags">
+		decoCarTireSmallFlat,resourceForgedIron,resourceGlue,resourceScrapPolymers
+	</set>
+	<!-- More logical bone knife -->
+	<set xpath="/recipes/recipe[@name='meleeWpnBladeT0BoneKnife']/ingredient[@name='resourceBone']/@count">
+		1
+	</set>
+	<append xpath="/recipes/recipe[@name='meleeWpnBladeT0BoneKnife']">
+		<ingredient name="resourceCloth" count="2" />
+	</append>
+	<!-- Molotov is less expensive -->
+	<set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']/ingredient[@name='ammoGasCan']/@count">
+		50
+	</set>
+	<!-- Wood Spikes are 20% less expensive -->
+	<set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">
+		16
+	</set>
+	<!-- Food Fixes -->
+	<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">
+		2
+	</set>
+	<set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">
+		1
+	</set>
+	<set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">
+		1
+	</set>
+	<set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">
+		2
+	</set>
+	<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">
+		1
+	</set>
+	<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">
+		2
+	</set>
+	<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">
+		2
+	</set>
+</config>

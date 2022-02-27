@@ -1,0 +1,44 @@
+<configs>
+	<!-- rule 1 cardio boost speed -->
+	<append xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group[1]">
+		<passive_effect name="WalkSpeed" operation="perc_add" level="1,3" value=".10,.15" />
+		<passive_effect name="RunSpeed" operation="perc_add" level="2,3" value=".10,.15" />
+	</append>
+	<set xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group/effect_description[@long_desc_key='perkRuleOneCardioNameRank1LongDesc']/@long_desc_key">
+		Just put one foot in front of the other. Increase walking speed by 10%. Increase stamina regen by 10% when sprinting.
+	</set>
+	<set xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group/effect_description[@long_desc_key='perkRuleOneCardioNameRank2LongDesc']/@long_desc_key">
+		You are the running man! Increase running speed by 10%. Increase stamina regen by 15% when sprinting.
+	</set>
+	<set xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group/effect_description[@long_desc_key='perkRuleOneCardioNameRank3LongDesc']/@long_desc_key">
+		You are a marathon man! Increase both walking and running speed by 15%. Increase stamina regen by 30% when sprinting.
+	</set>
+	<!-- The Huntsman boosts damage to animals -->
+	<append xpath="/progression/perks/perk[@name='perkTheHuntsman']/effect_group[1]">
+		<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".05,.25">
+			<requirement name="EntityTagCompare" target="other" tags="bear,wolf,dog,coyote,mountainlion,deer,vulture" />
+		</passive_effect>
+	</append>
+	<!-- charismatic nature applies to self -->
+	<append xpath="/progression/perks/perk[@name='perkCharismaticNature']/effect_group">
+		<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffPerkCharismaticNature">
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2">
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="2" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3">
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="3" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4">
+			<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="4" />
+			<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="4" />
+		</triggered_effect>
+	</append>
+</configs>

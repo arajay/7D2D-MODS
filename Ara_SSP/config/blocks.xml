@@ -1,0 +1,36 @@
+<config>
+	<!-- Pickup Fixes -->
+	<!-- Tires for wheel crafting -->
+	<append xpath="/blocks/block[@name='decoCarTireSmallFlat']">
+		<property name="CanPickup" value="true" />
+	</append>
+	<append xpath="/blocks/block[@name='decoCarTireFlat']">
+		<property name="CanPickup" value="true" />
+	</append>
+	<!-- Lantern in POI -->
+	<append xpath="/blocks/block[@name='lanternDecorLight']">
+		<property name="CanPickup" value="true" param1="lanternLight_player" />
+		<property name="TakeDelay" value="2" />
+		<property name="Class" value="" />
+	</append>
+	<!-- Flashlight "left on" in POI -->
+	<append xpath="/blocks/block[@name='flashlightDecor']">
+		<property name="CanPickup" value="true" param1="meleeToolFlashlight02" />
+		<property name="TakeDelay" value="2" />
+		<property name="Class" value="" />
+	</append>
+	<!-- Burning Barrel -->
+	<append xpath="/blocks/block[@name='burningBarrel']">
+		<property name="CanPickup" value="true" param1="burningBarrelPlayer" />
+		<property name="TakeDelay" value="2" />
+		<property name="Class" value="" />
+	</append>
+	<!-- Mines -->
+	<append xpath="/blocks/block[@name='mineCookingPot']">
+		<property name="CanPickup" value="true" />
+	</append>
+	<!-- Player crafted farm plot -->
+	<append xpath="/blocks/block[@name='farmPlotBlockPlayer']">
+		<property name="CanPickup" value="true" />
+	</append>
+</config>

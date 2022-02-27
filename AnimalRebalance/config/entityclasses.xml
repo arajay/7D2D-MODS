@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+	<!-- TIMID ANIMALS -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/property[@name='TimeStayAfterDeath']">
+		1200
+	</set>
+	<!-- global swim nerf -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/property[@name='SwimSpeed']">
+		0.5
+	</set>
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/property[@name='SwimStrokeRate']">
+		1,1.1
+	</set>
+	<!-- global health nerf -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">
+		-.65,-.45
+	</set>
+	<!-- DEER -->
+	<!-- remove SightRange override so it inherits the base value -->
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='MaxTurnSpeed']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='MoveSpeedPanic']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='TimeStayAfterDeath']" />
+	<append xpath="/entity_classes/entity_class[@name='animalStag']">
+		<property name="SightRange" value="42" />
+		<property name="MaxTurnSpeed" value="256" />
+		<property name="MoveSpeedPanic" value="1.88" />
+		<property name="TimeStayAfterDeath" value="1200" />
+		<property name="JumpMaxDistance" value="2,4" />
+	</append>
+	<!-- RABBIT -->
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='HasRagdoll']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='MoveSpeedPanic']" />
+	<append xpath="/entity_classes/entity_class[@name='animalRabbit']">
+		<property name="HasRagdoll" value="true" />
+		<property name="SightRange" value="48" />
+		<property name="MoveSpeed" value="1" />
+		<property name="MoveSpeedPanic" value="2.38" />
+		<property name="JumpMaxDistance" value="1,2" />
+	</append>
+	<!-- CHICKEN -->
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='HasRagdoll']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='MoveSpeedPanic']" />
+	<append xpath="/entity_classes/entity_class[@name='animalChicken']">
+		<property name="HasRagdoll" value="true" />
+		<property name="MoveSpeed" value="0.5" />
+		<property name="MoveSpeedPanic" value="1" />
+		<property name="SightRange" value="18" />
+		<property name="JumpMaxDistance" value="1,2" />
+	</append>
+	<!-- HOSTILE ANIMALS -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='TimeStayAfterDeath']">
+		1200
+	</set>
+	<!-- hostile animals notice players sooner -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SightRange']">
+		32
+	</set>
+	<!-- global swim nerf -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SwimSpeed']">
+		0.5
+	</set>
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SwimStrokeRate']">
+		1,1.1
+	</set>
+	<!-- global speed nerf -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='MoveSpeedPanic']">
+		0.9,1
+	</set>
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='MoveSpeedAggro']">
+		0.9,1
+	</set>
+	<!-- global health nerf -->
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='perc_add']/@value">
+		-.65,-.45
+	</set>
+	<!-- global damage nerf -->
+	<append xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.5,-.25" />
+	</append>
+	<!-- BEAR -->
+	<append xpath="/entity_classes/entity_class[@name='animalZombieBear']">
+		<!-- zombie animals do not see so well -->
+		<property name="SightRange" value="20" />
+		<!-- zombie animals are slower -->
+		<property name="MoveSpeedPanic" value="0.8" />
+	</append>
+	<!-- WOLF / COYOTE -->
+	<append xpath="/entity_classes/entity_class[@name='animalWolf']">
+		<property name="MoveSpeed" value="0.5" />
+		<property name="MoveSpeedAggro" value="1, 1.2" />
+		<property name="MoveSpeedPanic" value="1.2" />
+		<property name="SwimSpeed" value="0.8" />
+	</append>
+	<!-- dire wolf -->
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='SizeScale']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='MoveSpeedAggro']" />
+	<append xpath="/entity_classes/entity_class[@name='animalDireWolf']">
+		<!-- dire wolves are absolutely massive -->
+		<property name="SizeScale" value="1.8" />
+		<property name="MoveSpeedAggro" value="0.9, 1.0" />
+		<property name="MoveSpeedPanic" value="1" />
+	</append>
+	<!-- MOUNTAIN LION -->
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/property[@name='MoveSpeedAggro']" />
+	<append xpath="/entity_classes/entity_class[@name='animalMountainLion']">
+		<property name="SizeScale" value="1.3" />
+		<property name="MoveSpeedAggro" value="1.9, 2.0" />
+		<property name="SwimSpeed" value="1.5" />
+	</append>
+	<!-- ZOMBIE DOG -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='MoveSpeedPanic']" />
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='MoveSpeedAggro']" />
+	<append xpath="/entity_classes/entity_class[@name='animalZombieDog']">
+		<!-- zombie animals do not see so well -->
+		<property name="SightRange" value="24" />
+		<!-- zombie animals are slower -->
+		<property name="MoveSpeedAggro" value="0.9, 1.1" />
+		<property name="MoveSpeedPanic" value="1.1" />
+	</append>
+</configs>

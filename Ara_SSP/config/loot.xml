@@ -1,0 +1,13 @@
+﻿<config>
+	<!-- Bigger toolbox is bigger -->
+	<set xpath="lootcontainers/lootcontainer[@name='rollingToolBox']/@size">
+		4,5
+	</set>
+	<!-- slightly more eggs -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@loot_prob_template">
+		med
+	</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/@count">
+		all
+	</set>
+</config>

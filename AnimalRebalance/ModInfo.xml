@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="Animal Rebalance" />
+		<Description value="Rebalance animal health, damage and behavior to be more realistic." />
+		<Author value="Arajay" />
+		<Version value="0.1" compat="A20.2" />
+		<!-- <Website value="https://www.nexusmods.com" /> -->
+	</ModInfo>
+</xml>
