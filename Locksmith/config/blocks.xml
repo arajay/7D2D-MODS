@@ -5,6 +5,20 @@
 	<remove xpath="/blocks/block[@name='metalReinforcedDoorWooden']" />
 	<remove xpath="/blocks/block[@name='ironDoor1_v2']" />
 	<remove xpath="/blocks/block[@name='ironDoor1_v3']" />
+	<remove xpath="/blocks/block[@name='commercialDoor1_v2']" />
+	<remove xpath="/blocks/block[@name='commercialDoor1_v3']" />
+	<remove xpath="/blocks/block[@name='commercialDoor2_v2']" />
+	<remove xpath="/blocks/block[@name='commercialDoor2_v3']" />
+	<remove xpath="/blocks/block[@name='commercialDoor4_v2']" />
+	<remove xpath="/blocks/block[@name='commercialDoor4_v3']" />
+	<remove xpath="/blocks/block[@name='houseFrontDoor1_v2']" />
+	<remove xpath="/blocks/block[@name='houseFrontDoor1_v3']" />
+	<remove xpath="/blocks/block[@name='houseFrontDoor2_v2']" />
+	<remove xpath="/blocks/block[@name='houseFrontDoor2_v3']" />
+	<remove xpath="/blocks/block[@name='woodHatch1_v2']" />
+	<remove xpath="/blocks/block[@name='woodHatch1_v3']" />
+	<remove xpath="/blocks/block[@name='scrapHatch_v2']" />
+	<remove xpath="/blocks/block[@name='scrapHatch_v3']" />
 	<!-- 2. set xpath -->
 	<!-- UPDATE T1 DOORS TO MAINTAIN CRAFTING UPGRADE PATH -->
 	<set xpath="/blocks/block[@name='secureDoorWooden']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
@@ -12,6 +26,27 @@
 	</set>
 	<set xpath="/blocks/block[@name='ironDoor1_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
 		ironDoor1_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='commercialDoor1_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		commercialDoor1_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='commercialDoor2_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		commercialDoor2_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='commercialDoor4_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		commercialDoor4_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='houseFrontDoor1_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		houseFrontDoor1_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='houseFrontDoor2_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		houseFrontDoor2_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='woodHatch1_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		woodHatch1_v2_default
+	</set>
+	<set xpath="/blocks/block[@name='scrapHatch_v1']/property[@class='UpgradeBlock']/property[@name='ToBlock']/@value">
+		scrapHatch_v2_default
 	</set>
 	<!-- 3. append _default -->
 	<!-- CREATE SHADOW COPIES OF T2/T3 DOORS TO MAINTAIN UPGRADE PATH -->
@@ -126,6 +161,210 @@
 			<property name="DowngradeBlock" value="ironDoor1_v2_default" />
 			<property name="SortOrder2" value="0310" />
 		</block>
+		<block name="commercialDoor1_v2_default">
+			<property name="Extends" value="commercialDoor1_v1" />
+			<property name="Material" value="Mwood_regular" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="Texture" value="241" />
+			<property name="Model" value="Entities/Doors/commercial_door_1_v2Prefab" />
+			<property name="ModelOffset" value="0,0,0" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor1_v3_default" />
+				<property name="Item" value="resourceScrapIron" />
+				<property name="ItemCount" value="20" />
+				<property name="UpgradeHitCount" value="4" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<property name="DowngradeBlock" value="commercialDoor1_v1" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="3" />
+			</property>
+			<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="0" tag="allHarvest" />
+			<drop event="Destroy" name="resourceScrapBrass" count="0" prob="0" tag="WasteTreasuresDoorHarvest" />
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder2" value="0205" />
+		</block>
+		<block name="commercialDoor1_v3_default">
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="DoorSecure" />
+			<property name="Material" value="Mmetal" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="LightOpacity" value="1" />
+			<property name="TintColor" value="FFFFFF" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Tags" value="door" />
+			<property name="BlockTag" value="Door" />
+			<property name="Model" value="Entities/Doors/commercial_door_1_v3Prefab" />
+			<property name="Place" value="Door" />
+			<!-- build restriction -->
+			<property name="PlaceEverywhere" value="true" />
+			<property name="AllowAllRotations" value="true" />
+			<!-- enables the 45 degree rotations -->
+			<property name="ModelOffset" value="0,0,0" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="1,2,1" />
+			<property name="ImposterExchange" value="imposterBlock" param1="9" />
+			<property name="MeshDamage" value="
+				Door/Door_DMG0, 300,
+				Door/Door_DMG1, 240,
+				Door/Door_DMG2, 180,
+				Door/Door_DMG3, 120,
+				Door/Door_DMG4, 60" />
+			<property name="OpenSound" value="door_metal_open" />
+			<property name="CloseSound" value="door_metal_close" />
+			<property name="DowngradeBlock" value="commercialDoor1_v2_default" />
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="20" />
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="8" tag="allHarvest" />
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
+			<drop event="Destroy" count="0" />
+			<property name="FilterTags" value="MC_building,SC_doors" />
+			<property name="SortOrder1" value="7060" />
+			<property name="SortOrder2" value="0210" />
+		</block>
+		<block name="commercialDoor2_v2_default">
+			<property name="Extends" value="commercialDoor1_v2_default" />
+			<property name="Model" value="Entities/Doors/commercial_door_2_v2Prefab" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor2_v3_default" />
+			</property>
+			<property name="DowngradeBlock" value="commercialDoor2_v1" />
+			<property name="SortOrder2" value="0225" />
+		</block>
+		<block name="commercialDoor2_v3_default">
+			<property name="Extends" value="commercialDoor1_v3_default" />
+			<property name="Model" value="Entities/Doors/commercial_door_2_v3Prefab" />
+			<property name="DowngradeBlock" value="commercialDoor2_v2_default" />
+			<property name="SortOrder2" value="0230" />
+		</block>
+		<block name="commercialDoor4_v2_default">
+			<property name="Extends" value="commercialDoor1_v2_default" />
+			<property name="Model" value="Entities/Doors/commercial_door_4_v2Prefab" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor4_v3_default" />
+			</property>
+			<property name="DowngradeBlock" value="commercialDoor4_v1" />
+			<property name="SortOrder2" value="0265" />
+		</block>
+		<block name="commercialDoor4_v3_default">
+			<property name="Extends" value="commercialDoor1_v3_default" />
+			<property name="Model" value="Entities/Doors/commercial_door_4_v3Prefab" />
+			<property name="DowngradeBlock" value="commercialDoor4_v2_default" />
+			<property name="SortOrder2" value="0270" />
+		</block>
+		<block name="houseFrontDoor1_v2_default">
+			<property name="Extends" value="houseFrontDoor1_v1" />
+			<property name="Material" value="Mwood_weak" />
+			<property name="PassThroughDamage" value="true" />
+			<property name="Texture" value="241" />
+			<property name="Model" value="Entities/Doors/house_frontDoor1_v2Prefab" />
+			<property name="ModelOffset" value="0,0,0" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="houseFrontDoor1_v3_default" />
+				<property name="Item" value="resourceScrapIron" />
+				<property name="ItemCount" value="20" />
+				<property name="UpgradeHitCount" value="4" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<property name="DowngradeBlock" value="houseFrontDoor1_v1" />
+			<drop event="Destroy" name="resourceDoorKnob" count="0" prob="0" tag="WasteTreasuresDoorHarvest" />
+			<drop event="Destroy" count="0" />
+			<property name="SortOrder2" value="0145" />
+		</block>
+		<block name="houseFrontDoor1_v3_default">
+			<property name="Extends" value="commercialDoor1_v3_default" />
+			<property name="Texture" value="241" />
+			<property name="Model" value="Entities/Doors/house_frontDoor1_v3Prefab" />
+			<property name="ModelOffset" value="0,0,0" />
+			<property name="ImposterExchange" value="imposterBlock" param1="25" />
+			<property name="OpenSound" value="door_wood_open" />
+			<property name="CloseSound" value="door_wood_close" />
+			<property name="DowngradeBlock" value="houseFrontDoor1_v2_default" />
+			<property name="SortOrder2" value="0150" />
+		</block>
+		<block name="houseFrontDoor2_v2_default">
+			<property name="Extends" value="houseFrontDoor1_v2_default" />
+			<property name="Model" value="Entities/Doors/house_frontDoor2_v2Prefab" />
+			<property name="ImposterExchange" value="imposterBlock" param1="70" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="houseFrontDoor2_v3_default" />
+			</property>
+			<property name="DowngradeBlock" value="houseFrontDoor2_v1" />
+			<property name="SortOrder2" value="0165" />
+		</block>
+		<block name="houseFrontDoor2_v3_default">
+			<property name="Extends" value="houseFrontDoor1_v3_default" />
+			<property name="Model" value="Entities/Doors/house_frontDoor2_v3Prefab" />
+			<property name="ImposterExchange" value="imposterBlock" param1="70" />
+			<property name="DowngradeBlock" value="houseFrontDoor2_v2_default" />
+			<property name="SortOrder2" value="0170" />
+		</block>
+		<block name="woodHatch1_v2_default">
+			<property name="Extends" value="woodHatch1_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Material" value="MwoodReinforced" />
+			<property name="Model" value="Entities/Doors/woodenHatch1_v2Prefab" />
+			<property name="ModelOffset" value="0,.5,0" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="woodHatch1_v3_default" />
+				<property name="Item" value="resourceScrapIron" />
+				<property name="ItemCount" value="12" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<property name="DowngradeBlock" value="woodHatch1_v1" />
+			<property name="SortOrder2" value="0505" />
+		</block>
+		<block name="woodHatch1_v3_default">
+			<property name="Extends" value="woodHatch1_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Material" value="MwoodMetal" />
+			<property name="Model" value="Entities/Doors/woodenHatch1_v3Prefab" />
+			<property name="ModelOffset" value="0,.5,0" />
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="10" />
+			</property>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="scrapHatch_v1" />
+				<property name="Item" value="scrapHatch_v1" />
+				<property name="ItemCount" value="1" />
+				<property name="UpgradeHitCount" value="5" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<drop event="Harvest" name="resourceWood" count="0" tag="allHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="6" tag="allHarvest" />
+			<property name="DowngradeBlock" value="woodHatch1_v2_default" />
+			<property name="SortOrder2" value="0510" />
+		</block>
+		<block name="scrapHatch_v2_default">
+			<property name="Extends" value="scrapHatch_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Model" value="Entities/Doors/scrap_hatch_v2Prefab" />
+			<property name="ModelOffset" value="0,.5,0" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="scrapHatch_v3_default" />
+			</property>
+			<property name="DowngradeBlock" value="scrapHatch_v1" />
+			<property name="SortOrder2" value="0525" />
+		</block>
+		<block name="scrapHatch_v3_default">
+			<property name="Extends" value="scrapHatch_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Model" value="Entities/Doors/scrap_hatch_v3Prefab" />
+			<property name="ModelOffset" value="0,.5,0" />
+			<property name="OpenSound" value="open_hatch_scrap" />
+			<property name="CloseSound" value="close_hatch_scrap" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vaultHatch_v1" />
+				<property name="Item" value="vaultHatch_v1" />
+				<property name="ItemCount" value="1" />
+				<property name="UpgradeHitCount" value="6" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<property name="DowngradeBlock" value="scrapHatch_v2_default" />
+			<property name="SortOrder2" value="0530" />
+		</block>
 	</append>
 	<!-- 4. append vanillaNameSpace -->
 	<!-- CREATE NEW T2/T3 DOORS, ADDING LOCKPICK SUPPORT, USING THE EXISTING NAMESPACE -->
@@ -137,6 +376,7 @@
 	<!-- 6. append LockPickItem, LockPickTime, LockPickBreakChance, LootList -->
 	<append xpath="/blocks">
 		<block name="secureReinforcedDoorWooden">
+			<property name="Extends" value="secureReinforcedDoorWooden_default" />
 			<property name="DescriptionKey" value="cntGunSafeDesc" />
 			<property name="Class" value="SecureLoot" />
 			<property name="LockPickItem" value="resourceLockPick" />
@@ -195,6 +435,181 @@
 			-->
 			<property name="DowngradeBlock" value="insecureIronDoor1_v3" />
 		</block>
+		<block name="commercialDoor1_v2">
+			<property name="Extends" value="commercialDoor1_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor1_v2" />
+		</block>
+		<block name="commercialDoor1_v3">
+			<property name="Extends" value="commercialDoor1_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor1_v3" />
+		</block>
+		<block name="commercialDoor2_v2">
+			<property name="Extends" value="commercialDoor2_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor2_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor2_v2" />
+		</block>
+		<block name="commercialDoor2_v3">
+			<property name="Extends" value="commercialDoor2_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor2_v3" />
+		</block>
+		<block name="commercialDoor4_v2">
+			<property name="Extends" value="commercialDoor4_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="commercialDoor4_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor4_v2" />
+		</block>
+		<block name="commercialDoor4_v3">
+			<property name="Extends" value="commercialDoor4_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor4_v3" />
+		</block>
+		<block name="houseFrontDoor1_v2">
+			<property name="Extends" value="houseFrontDoor1_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="houseFrontDoor1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor1_v2" />
+		</block>
+		<block name="houseFrontDoor1_v3">
+			<property name="Extends" value="houseFrontDoor1_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor1_v3" />
+		</block>
+		<block name="houseFrontDoor2_v2">
+			<property name="Extends" value="houseFrontDoor2_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="houseFrontDoor2_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor2_v2" />
+		</block>
+		<block name="houseFrontDoor2_v3">
+			<property name="Extends" value="houseFrontDoor2_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor2_v3" />
+		</block>
+		<block name="woodHatch1_v2">
+			<property name="Extends" value="woodHatch1_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="woodHatch1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureWoodHatch1_v2" />
+		</block>
+		<block name="woodHatch1_v3">
+			<property name="Extends" value="woodHatch1_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureWoodHatch1_v3" />
+		</block>
+		<block name="scrapHatch_v2">
+			<property name="Extends" value="scrapHatch_v2_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="scrapHatch_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureScrapHatch_v2" />
+		</block>
+		<block name="scrapHatch_v3">
+			<property name="Extends" value="scrapHatch_v3_default" />
+			<property name="DescriptionKey" value="cntGunSafeDesc" />
+			<property name="Class" value="SecureLoot" />
+			<property name="LockPickItem" value="resourceLockPick" />
+			<property name="LockPickTime" value="5" />
+			<property name="LockPickBreakChance" value="0.65" />
+			<property name="LootList" value="secureDoorContainer" />
+			<property name="Tags" value="safes,door" />
+			<property name="DowngradeBlock" value="insecureScrapHatch_v3" />
+		</block>
 	</append>
 	<!-- 4. append insecureDoor -->
 	<!-- APPEND INSECURE VERSIONS OF LOCKED DOORS -->
@@ -221,7 +636,7 @@
 			<property name="DowngradeBlock" value="insecureDoorWooden" />
 		</block>
 		<block name="insecureMetalReinforcedDoorWooden">
-			<property name="Extends" value="secureReinforcedDoorWooden_default" />
+			<property name="Extends" value="metalReinforcedDoorWooden_default" />
 			<property name="DescriptionKey" value="doorGroupDesc" />
 			<property name="Class" value="Door" />
 			<property class="UpgradeBlock">
@@ -256,63 +671,166 @@
 			</property>
 			<property name="DowngradeBlock" value="insecureIronDoor1_v2" />
 		</block>
+		<block name="insecureCommercialDoor1_v1">
+			<property name="Extends" value="commercialDoor1_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor1_v2" />
+			</property>
+		</block>
+		<block name="insecureCommercialDoor1_v2">
+			<property name="Extends" value="commercialDoor1_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor1_v1" />
+		</block>
+		<block name="insecureCommercialDoor1_v3">
+			<property name="Extends" value="ommercialDoor1_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor1_v2" />
+		</block>
+		<block name="insecureCommercialDoor2_v1">
+			<property name="Extends" value="commercialDoor2_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor2_v2" />
+			</property>
+		</block>
+		<block name="insecureCommercialDoor2_v2">
+			<property name="Extends" value="commercialDoor2_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor2_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor2_v1" />
+		</block>
+		<block name="insecureCommercialDoor2_v3">
+			<property name="Extends" value="commercialDoor2_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor2_v2" />
+		</block>
+		<block name="insecureCommercialDoor4_v1">
+			<property name="Extends" value="commercialDoor4_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor4_v2" />
+			</property>
+		</block>
+		<block name="insecureCommercialDoor4_v2">
+			<property name="Extends" value="commercialDoor4_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureCommercialDoor4_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureCommercialDoor4_v1" />
+		</block>
+		<block name="insecureCommercialDoor4_v3">
+			<property name="Extends" value="commercialDoor4_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureCommercialDoor4_v2" />
+		</block>
+		<block name="insecureHouseFrontDoor1_v1">
+			<property name="Extends" value="houseFrontDoor1_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureHouseFrontDoor1_v2" />
+			</property>
+		</block>
+		<block name="insecureHouseFrontDoor1_v2">
+			<property name="Extends" value="houseFrontDoor1_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureHouseFrontDoor1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor1_v1" />
+		</block>
+		<block name="insecureHouseFrontDoor1_v3">
+			<property name="Extends" value="houseFrontDoor1_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor1_v2" />
+		</block>
+		<block name="insecureHouseFrontDoor2_v1">
+			<property name="Extends" value="houseFrontDoor2_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureHouseFrontDoor2_v2" />
+			</property>
+		</block>
+		<block name="insecureHouseFrontDoor2_v2">
+			<property name="Extends" value="houseFrontDoor2_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureHouseFrontDoor2_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor2_v1" />
+		</block>
+		<block name="insecureHouseFrontDoor2_v3">
+			<property name="Extends" value="houseFrontDoor2_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureHouseFrontDoor2_v2" />
+		</block>
+		<block name="insecureWoodHatch1_v1">
+			<property name="Extends" value="woodHatch1_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureWoodHatch1_v2" />
+			</property>
+		</block>
+		<block name="insecureWoodHatch1_v2">
+			<property name="Extends" value="woodHatch1_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureWoodHatch1_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureWoodHatch1_v1" />
+		</block>
+		<block name="insecureWoodHatch1_v3">
+			<property name="Extends" value="woodHatch1_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureWoodHatch1_v2" />
+		</block>
+		<block name="insecureScrapHatch_v1">
+			<property name="Extends" value="scrapHatch_v1" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureScrapHatch_v2" />
+			</property>
+		</block>
+		<block name="insecureScrapHatch_v2">
+			<property name="Extends" value="scrapHatch_v2_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="insecureScrapHatch_v3" />
+			</property>
+			<property name="DowngradeBlock" value="insecureScrapHatch_v1" />
+		</block>
+		<block name="insecureScrapHatch_v3">
+			<property name="Extends" value="scrapHatch_v3_default" />
+			<property name="DescriptionKey" value="doorGroupDesc" />
+			<property name="Class" value="Door" />
+			<property name="DowngradeBlock" value="insecureScrapHatch_v2" />
+		</block>
 	</append>
 </locksmith>
-<!--
-//
-all blocks with
-<property name="Class" value="DoorSecure"/>
-//
-these first 6 basic doors make up a single upgrade path
-and are player-craftable
-//
-7060
-0100 secureDoorWooden
-0105 secureReinforcedDoorWooden
-0110 metalReinforcedDoorWooden
-0300 ironDoor1_v1
-0305 ironDoor1_v2
-0310 ironDoor1_v3
-//
-these are used only in POIs ??
-//
-0200 commercialDoor1_v1
-0205 commercialDoor1_v2
-0210 commercialDoor1_v3
-0220 commercialDoor2_v1
-0225 commercialDoor2_v2
-0230 commercialDoor2_v3
-0260 commercialDoor4_v1
-0265 commercialDoor4_v2
-0270 commercialDoor4_v3
-0140 houseFrontDoor1_v1
-0145 houseFrontDoor1_v2
-0150 houseFrontDoor1_v3
-0160 houseFrontDoor2_v1
-0165 houseFrontDoor2_v2
-0170 houseFrontDoor2_v3
-0340 vaultDoor01
-0345 vaultDoor02
-0350 vaultDoor03
-// HATCHES
-woodHatch1_v1
-woodHatch1_v2
-woodHatch1_v3
-scrapHatch_v1
-scrapHatch_v2
-scrapHatch_v3
-manholeHatch
-// CELLARS
-cellarDoorDoubleWood
-cellarDoorDoubleIron
-cellarDoorDoubleSteel
-// SHUTTERS
-shuttersWood01
-shuttersIron01
-shuttersSteel01
-shuttersWood02
-shuttersIron02
-shuttersSteel02
-// GARAGE DOORS
-can they be unlocked? is there an "open" state?
--->
