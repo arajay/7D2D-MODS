@@ -3,17 +3,17 @@ Mods for the game 7 Days to Die that I've created in order to improve and enhanc
 
 ## Current Mods
 
-### Massive Hordes
-Refactors the roaming hordes to be much larger, and greatly increases the maximum simultaneous entity count.
-
-### More Zombies
-Increases biome spawn rates. Adds custom "boss mobs" for each biome that spawn very rarely. 
+### Animal Rebalance
+Nerfs hostile animal health significantly, and some animal damage to a lesser extent. 
 
 ### Locksmith
-Enables lockpicking for locked POI doors.
+Enables lockpicking POI doors. Does not include vault, garage, cellar or shutter doors. 
 
 ### Lootable Vending Machines
-Converts broken POI vending machines into loot containers with custom loot list. 
+Converts broken POI vending machines into loot containers with custom loot list. Vending machine may contain cash, dukes, mega crush and/or candy. 
+
+### More Zombies
+Increases biome ambient spawn rates. Refactors roaming hordes to be MUCH larger, and greatly increases the maximum simultaneous entity count.
 
 ## Proposed Mods
 
