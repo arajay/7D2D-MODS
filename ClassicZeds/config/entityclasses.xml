@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+	<!-- nerf movement -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='MoveSpeedAggro']/@value">
+		0.1, 0.5
+	</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='MoveSpeedRand']/@value">
+		-.25, .25
+	</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='MoveSpeedPanic']/@value">
+		0.5
+	</set>
+	<!-- nerf swim speeds -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'animal'))]/property[@name='SwimSpeed']/@value">
+		0.72
+	</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'animal'))]/property[@name='SwimStrokeRate']/@value">
+		0.96,1.02
+	</set>
+	<!-- no climbing/ladders -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='CanClimbLadders']/@value">
+		false
+	</set>
+	<!-- no jumping -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='JumpMaxDistance']/@value">
+		0.2,0.5
+	</set>
+	<!-- never get bored -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie')]/property[@name='AttackTimeoutDay']/@value">
+		8
+	</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie')]/property[@name='AttackTimeoutNight']/@value">
+		8
+	</set>
+</configs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="Classic Zeds" />
+		<Description value="Classic, pre '28 days later' zombie behavior. Intended to be used with higher spawn rates." />
+		<Author value="Arajay" />
+		<Version value="0.5" compat="A20.2" />
+		<!-- <Website value="https://www.nexusmods.com" /> -->
+	</ModInfo>
+</xml>
