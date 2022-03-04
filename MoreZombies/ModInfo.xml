@@ -2,9 +2,9 @@
 <xml>
 	<ModInfo>
 		<Name value="More Zombies" />
-		<Description value="Greatly increases biome based spawn rates. Overhauls wandering hordes to be massive but contain only zombies (no animal hordes)." />
+		<Description value="Removes all biome based ambient spawns. Updates all other hordes to be massive." />
 		<Author value="Arajay" />
-		<Version value="0.9" compat="A20.2" />
+		<Version value="0.91" compat="A20.2" />
 		<!-- <Website value="https://www.nexusmods.com" /> -->
 	</ModInfo>
 </xml>

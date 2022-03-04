@@ -1,122 +1,25 @@
 <configs>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']//gamestage/spawn/@maxAlive">
-		360
+	<!-- ensure all zombies spawn at once for each spawner instead of a few at a time -->
+	<set xpath="/gamestages/spawner/gamestage/spawn/@maxAlive">
+		2048
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[01]/spawn/@num">
-		160
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[02]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[04]/spawn/@num">
-		192
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[06]/spawn/@num">
-		224
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[07]/spawn/@num">
+	<!-- set a huge number of zombies for all horde spawners -->
+	<set xpath="/gamestages[@stage &lt; 64]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
 		256
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[09]/spawn/@num">
-		192
+	<set xpath="/gamestages[@stage &gt; 63 and @stage &lt; 128]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+		512
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[10]/spawn/@num">
-		288
+	<set xpath="/gamestages[@stage &gt; 127 and @stage &lt; 256]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+		720
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[11]/spawn/@num">
-		192
+	<set xpath="/gamestages[@stage &gt; 255 and @stage &lt; 512]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+		960
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[13]/spawn/@num">
-		224
+	<set xpath="/gamestages[@stage &gt; 511 and @stage &lt; 1024]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+		1600
 	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[14]/spawn/@num">
-		192
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[15]/spawn/@num">
-		256
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[16]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[17]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[18]/spawn/@num">
-		224
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[19]/spawn/@num">
-		256
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[21]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[22]/spawn/@num">
-		256
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[23]/spawn/@num">
-		224
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[24]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[25]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[26]/spawn/@num">
-		224
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[28]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[29]/spawn/@num">
-		224
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[30]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[31]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[32]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[33]/spawn/@num">
-		192
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[35]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[36]/spawn/@num">
-		256
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[37]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[39]/spawn/@num">
-		160
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[40]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[42]/spawn/@num">
-		352
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[43]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[44]/spawn/@num">
-		288
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[45]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[46]/spawn/@num">
-		352
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[48]/spawn/@num">
-		320
-	</set>
-	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[49]/spawn/@num">
-		256
+	<set xpath="/gamestages[@stage &gt; 1023]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+		2048
 	</set>
 </configs>
