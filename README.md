@@ -49,7 +49,6 @@ Fix "must have" perks, improve underpowered perks, consolidate redundant perks, 
 
 ### Book Perk Overhaul
 A highly ambitious idea to replace perk books with a perk system similar to [redacted], wherein perks are chosen by the player when they level up, instead of being found at random in mailboxes. 
-- Greatly reduce the number of available perks overall
 - Useless perks improved, consolidated, and/or removed entirely
 - Perk points granted when the related attribute/skill is increased
 - Perks gated behind skill thresholds, similar to crafting recipes
