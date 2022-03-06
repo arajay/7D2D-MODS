@@ -4,22 +4,22 @@
 		2048
 	</set>
 	<!-- set a huge number of zombies for all horde spawners -->
-	<set xpath="/gamestages[@stage &lt; 64]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &lt; 64]/spawn/@num">
 		256
 	</set>
-	<set xpath="/gamestages[@stage &gt; 63 and @stage &lt; 128]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 63 and @stage &lt; 128]/spawn/@num">
 		512
 	</set>
-	<set xpath="/gamestages[@stage &gt; 127 and @stage &lt; 256]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 127 and @stage &lt; 256]/spawn/@num">
 		720
 	</set>
-	<set xpath="/gamestages[@stage &gt; 255 and @stage &lt; 512]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 255 and @stage &lt; 512]/spawn/@num">
 		960
 	</set>
-	<set xpath="/gamestages[@stage &gt; 511 and @stage &lt; 1024]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 511 and @stage &lt; 1024]/spawn/@num">
 		1600
 	</set>
-	<set xpath="/gamestages[@stage &gt; 1023]/spawner[contains(@name,'Horde')]/gamestage/spawn/@num">
+	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 1023]/spawn/@num">
 		2048
 	</set>
 </configs>
