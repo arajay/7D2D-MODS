@@ -13,7 +13,7 @@ Enables lockpicking POI doors. Does not include vault, garage, cellar or shutter
 Converts broken POI vending machines into loot containers with custom loot list. Vending machine may contain cash, dukes, mega crush and/or candy. 
 
 ### More Zombies
-Increases biome ambient spawn rates. Refactors roaming hordes to be MUCH larger, and greatly increases the maximum simultaneous entity count.
+Disables biome-based ambient spawns. Refactors gamestage hordes to be MUCH larger, and greatly increases the maximum simultaneous entity count.
 
 ## Proposed Mods
 
