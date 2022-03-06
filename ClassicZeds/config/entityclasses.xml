@@ -12,10 +12,10 @@
 	</set>
 	<!-- nerf swim speeds -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'animal'))]/property[@name='SwimSpeed']/@value">
-		0.72
+		0.33
 	</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'animal'))]/property[@name='SwimStrokeRate']/@value">
-		0.96,1.02
+		0.60,0.90
 	</set>
 	<!-- no climbing/ladders -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='CanClimbLadders']/@value">
@@ -23,9 +23,9 @@
 	</set>
 	<!-- no jumping -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not(contains(@name, 'zombieSpider')) and not(contains(@name, 'animal'))]/property[@name='JumpMaxDistance']/@value">
-		0.2,0.5
+		0.0,0.2
 	</set>
-	<!-- never get bored -->
+	<!-- they never get bored -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie')]/property[@name='AttackTimeoutDay']/@value">
 		8
 	</set>
