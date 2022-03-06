@@ -34,7 +34,7 @@
 		<property name="HasRagdoll" value="true" />
 		<property name="SightRange" value="36" />
 		<property name="MoveSpeedPanic" value="1.86" />
-		<property name="JumpMaxDistance" value="0.15,0.25" />
+		<property name="JumpMaxDistance" value="0.1,0.25" />
 	</append>
 	<!-- CHICKEN -->
 	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/property[@name='HasRagdoll']" />
@@ -45,7 +45,7 @@
 		<property name="MoveSpeed" value="0.56" />
 		<property name="MoveSpeedPanic" value="1.04" />
 		<property name="SightRange" value="24" />
-		<property name="JumpMaxDistance" value="0.25,0.5" />
+		<property name="JumpMaxDistance" value="0.1" />
 	</append>
 	<!--
 	HOSTILE ANIMALS
@@ -97,7 +97,8 @@
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.35,-.25" />
 	</append>
 	<!-- ZOMBIE -->
-	<!-- zombie bear -->
+	<!-- try to undo the HealthMax nerf for zombie versions but nerf MoveSpeed -->
+	<!-- bear zombie -->
 	<append xpath="/entity_classes/entity_class[@name='animalZombieBear']">
 		<property name="MoveSpeedAggro" value="0.5, 0.8" />
 		<property name="MoveSpeedPanic" value="0.8" />
@@ -105,11 +106,10 @@
 	<append xpath="/entity_classes/entity_class[@name='animalZombieBear']/effect_group[@name='Base Effects']">
 		<passive_effect name="HealthMax" operation="perc_add" value=".5,.35" />
 	</append>
-	<!-- zombie dog -->
+	<!-- dog zombie -->
 	<remove xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='MoveSpeedAggro']" />
 	<remove xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='MoveSpeedPanic']" />
 	<append xpath="/entity_classes/entity_class[@name='animalZombieDog']">
-		<!-- zombie animals should move slower -->
 		<property name="MoveSpeedAggro" value="0.8, 1" />
 		<property name="MoveSpeedPanic" value="1" />
 	</append>
