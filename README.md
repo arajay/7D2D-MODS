@@ -4,10 +4,10 @@ Mods for the game 7 Days to Die that I've created in order to improve and enhanc
 ## Current Mods
 
 ### Animal Rebalance
-Nerfs hostile animal health significantly, and some animal damage to a lesser extent. 
+Boosts all animal SightRange significantly. Nerfs all animal swim speeds. Nerfs non-zombie hostile animal damage and health. Nerfs zombie animal move speed. 
 
 ### Locksmith
-Enables lockpicking POI doors. Does not include vault, garage, cellar or shutter doors. 
+Enables lockpicking POI doors. Does not include vault, garage, cellar or shutter doors. Still buggy even though it mostly works.
 
 ### Lootable Vending Machines
 Converts broken POI vending machines into loot containers with custom loot list. Vending machine may contain cash, dukes, mega crush and/or candy. 
