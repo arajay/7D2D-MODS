@@ -43,9 +43,9 @@ Fix "must have" perks, improve underpowered perks, consolidate redundant perks, 
 - Better Barter: either nerf the skill or overhaul prices
 - ~Lockpicking~ already addressed by Locksmith mod above
 - Animal Tracker: add support for tracking hostile animals and zombies
-- The Huntsman
-- Well Insulated
-- Charismatic Nature
+- The Huntsman: combine with animal tracker, or add anothe benefit such as hostile animals becoming docile in your presence
+- Well Insulated: remove entire, or possilby add more resistance types, such as burning/radiation damage
+- Charismatic Nature: enable auras to effect the player. rebalance as necessary.
 
 ### Book Perk Overhaul
 A highly ambitious idea to replace perk books with a perk system similar to [redacted], wherein perks are chosen by the player when they level up, instead of being found at random in mailboxes. 
