@@ -27,10 +27,13 @@ Fixes vehicle behavior so that they no longer get stuck on blocks.
 Make items such as weapon parts craftable. Update crafting recipes to be more logical, such as requiring tires for crafting wheels.
 
 ### Logical Cooking Overhaul
-Address things like water jars being consumed for recipes, and simple things like boiled meat requiring perks. Add food spoilage mechanics.
+Address things like water jars being consumed for recipes, and simple things like boiled meat requiring perks.
 
 ### Logical Farming Overhaul
 Address issues related to immovable player farm plots and expensive seed crafting.
+
+### Food Spoilage System
+Add a mechanic where food degrades over time, increasing the value of hunger and food related perks.
 
 ### Skill Balance Overhaul
 Fix "must have" perks, improve underpowered perks, consolidate redundant perks, and generally make multiplayer perks more useful to solo players. 
