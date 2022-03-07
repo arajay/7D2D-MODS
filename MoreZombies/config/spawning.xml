@@ -13,8 +13,8 @@
 			<spawn maxcount="0" respawndelay="0.3" time="Day" entitygroup="ZombiesForestDowntown" tags="downtown" />
 			<spawn maxcount="0" respawndelay="0.1" time="Night" entitygroup="ZombiesForestDowntownNight" tags="downtown" />
 			<!-- animal -->
-			<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
-			<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="2" respawndelay="0.3" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="1" respawndelay="1.1" time="Night" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<!-- boss mob -->
 			<!-- <spawn maxcount="8" respawndelay="28" time="Night" entitygroup="WolfPack" spawnDeadChance="0" notags="commercial,industrial,downtown" /> -->
 		</biome>
@@ -29,7 +29,7 @@
 			<spawn maxcount="0" respawndelay="0.15" time="Night" entitygroup="ZombiesNight" tags="commercial,industrial" notags="downtown" />
 			<spawn maxcount="0" respawndelay="0.15" time="Day" entitygroup="ZombiesDowntown" tags="downtown" />
 			<spawn maxcount="0" respawndelay="0.1" time="Night" entitygroup="ZombiesDowntown" tags="downtown" />
-			<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0.33" notags="commercial,industrial,downtown" />
+			<spawn maxcount="1" respawndelay="0.7" time="Any" entitygroup="WildGameForest" spawnDeadChance="0.5" notags="commercial,industrial,downtown" />
 			<spawn maxcount="2" respawndelay="1.1" time="Night" entitygroup="EnemyAnimalsBurntForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<!-- boss mob -->
 			<!-- <spawn maxcount="8" respawndelay="28" time="Night" entitygroup="ZombieDogGroup" spawnDeadChance="0" /> -->
@@ -45,8 +45,8 @@
 			<spawn maxcount="0" respawndelay="0.1" time="Night" entitygroup="ZombiesNight" tags="commercial,industrial" notags="downtown" />
 			<spawn maxcount="0" respawndelay="0.2" time="Day" entitygroup="ZombiesDowntown" tags="downtown" />
 			<spawn maxcount="0" respawndelay="0.09" time="Night" entitygroup="ZombiesDowntown" tags="downtown" />
-			<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
-			<spawn maxcount="2" respawndelay="3.5" time="Any" entitygroup="EnemyAnimalsDesert" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="2" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="3" respawndelay="3.5" time="Any" entitygroup="EnemyAnimalsDesert" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<!-- boss mob -->
 			<!-- <spawn maxcount="12" respawndelay="28" time="Night" entitygroup="VultureGroup" spawnDeadChance="0" /> -->
 		</biome>
@@ -61,7 +61,7 @@
 			<spawn maxcount="0" respawndelay="0.06" time="Night" entitygroup="ZombiesNight" tags="commercial,industrial" notags="downtown" />
 			<spawn maxcount="0" respawndelay="0.07" time="Day" entitygroup="ZombiesDowntown" tags="downtown" />
 			<spawn maxcount="0" respawndelay="0.04" time="Night" entitygroup="ZombiesDowntown" tags="downtown" />
-			<spawn maxcount="4" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="2" respawndelay="1" time="Any" entitygroup="WildGameForest" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<spawn maxcount="2" respawndelay="3.1" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<!-- boss mob -->
 			<!-- <spawn maxcount="5" respawndelay="28" time="Night" entitygroup="animalDireWolf" spawnDeadChance="0" /> -->
@@ -77,7 +77,7 @@
 			<spawn maxcount="0" respawndelay="0.002" time="Night" entitygroup="ZombiesWastelandNight" tags="commercial,industrial" notags="downtown" />
 			<spawn maxcount="0" respawndelay="0.0167" time="Day" entitygroup="ZombiesWastelandDowntown" tags="downtown" />
 			<spawn maxcount="0" respawndelay="0.002" time="Night" entitygroup="ZombiesWastelandDowntown" tags="downtown" />
-			<spawn maxcount="2" respawndelay="0.3" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" notags="commercial,industrial,downtown" />
+			<spawn maxcount="1" respawndelay="0.3" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" notags="commercial,industrial,downtown" />
 			<!-- boss mob -->
 			<!-- <spawn maxcount="5" respawndelay="28" time="Night" entitygroup="animalZombieBear" spawnDeadChance="0" /> -->
 		</biome>
