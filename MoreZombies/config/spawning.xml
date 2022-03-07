@@ -162,13 +162,13 @@
 		</entityspawner>
 	</append>
 	<!-- Feral (Bloodmoon?) Hordes -->
-	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/DelayBetweenSpawns/@value">
+	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/property[@name='DelayBetweenSpawns']/@value">
 		0
 	</set>
-	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/TotalAlive/@value">
+	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/property[@name='TotalAlive']/@value">
 		2048
 	</set>
-	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/TotalPerWave/@value">
+	<set xpath="/spawning/entityspawner[@name='NightHorde']/day[@value &gt; 0]/property[@name='TotalPerWave']/@value">
 		256,2048
 	</set>
 	<!-- Scout Hordes -->
