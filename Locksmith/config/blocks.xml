@@ -610,7 +610,7 @@
 	<!-- include all 3 tiers -->
 	<!-- set prop Class/@value = Door" -->
 	<!-- set prop UpgradeBlock/@ToBlock = next insecure tier -->
-	<!-- set prop DowngradeBlock/@value = previous insecure tier -->
+	<!-- set prop DowngradeBlock/@value = current insecure tier -->
 	<append xpath="/blocks">
 		<block name="insecureDoorWooden">
 			<property name="Extends" value="secureDoorWooden" />

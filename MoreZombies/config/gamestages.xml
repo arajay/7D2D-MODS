@@ -1,25 +1,49 @@
 <configs>
-	<!-- ensure all zombies spawn at once for each spawner instead of a few at a time -->
-	<set xpath="/gamestages/spawner/gamestage/spawn/@maxAlive">
-		2048
+	<set xpath="/gamestages/group/spawner[not(contains(@name, 'animal'))]/@count">
+		16,128
 	</set>
-	<!-- set a huge number of zombies for all horde spawners -->
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &lt; 64]/spawn/@num">
+	<remove xpath="/gamestages/spawner[@name='WanderingHorde']" />
+	<append xpath="/gamestages">
+		<spawner name="WanderingHorde">
+			<gamestage stage="01">
+				<spawn group="ZombiesAll" num="128" maxAlive="128" duration="09" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="ZombiesAll" num="256" maxAlive="256" duration="09" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="ZombiesAll" num="512" maxAlive="512" duration="09" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="ZombiesNight" num="720" maxAlive="720" duration="09" />
+			</gamestage>
+			<gamestage stage="600">
+				<spawn group="ZombiesNight" num="1024" maxAlive="1024" duration="09" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="ZombiesNight" num="2048" maxAlive="2048" duration="09" />
+			</gamestage>
+		</spawner>
+	</append>
+	<set xpath="/gamestages/spawner[@name='SleeperGSList']//spawn/@num">
+		128
+	</set>
+	<set xpath="/gamestages/spawner[@name='SleeperGSList']//spawn/@maxAlive">
+		128
+	</set>
+	<set xpath="/gamestages/spawner[@name='ScoutGSList']//spawn/@num">
 		256
 	</set>
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 63 and @stage &lt; 128]/spawn/@num">
+	<set xpath="/gamestages/spawner[@name='ScoutGSList']//spawn/@maxAlive">
+		256
+	</set>
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']//spawn/@num">
 		512
 	</set>
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 127 and @stage &lt; 256]/spawn/@num">
-		720
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']//spawn/@maxAlive">
+		512
 	</set>
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 255 and @stage &lt; 512]/spawn/@num">
-		960
-	</set>
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 511 and @stage &lt; 1024]/spawn/@num">
-		1600
-	</set>
-	<set xpath="/gamestages/spawner[contains(@name,'Horde')]/gamestage[@stage &gt; 1023]/spawn/@num">
-		2048
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']//spawn/@interval">
+		0
 	</set>
 </configs>

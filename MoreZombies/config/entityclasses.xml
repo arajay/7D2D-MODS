@@ -1,0 +1,6 @@
+<configs>
+	<!-- persistent dead bodies -->
+	<set xpath="/entity_classes/entity_class[not(contains(@name, 'player'))]/property[@name='TimeStayAfterDeath']/@value">
+		1200
+	</set>
+</configs>

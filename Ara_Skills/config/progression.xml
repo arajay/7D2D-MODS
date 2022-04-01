@@ -1,0 +1,11 @@
+<configs>
+	<!-- level curve is MUCH slower and we level cap -->
+	<remove xpath="/progression/level" />
+	<append xpath="/progression">
+		<level max_level="50" exp_to_level="10000" experience_multiplier="1.15" skill_points_per_level="1" clamp_exp_cost_at_level="50">
+		</level>
+	</append>
+	<!-- completely remove OP perks -->
+	<remove xpath="/progression/perks/perk[@name='perkSexualTrex']" />
+	<remove xpath="/progression/perks/perk[@name='perkDaringAdventurer']" />
+</configs>

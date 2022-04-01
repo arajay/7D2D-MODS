@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <configs>
 	<!-- persistent dead bodies -->
-	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='TimeStayAfterDeath']">
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='TimeStayAfterDeath']/@value">
 		1200
 	</set>
 	<!-- nerf swim speeds 60% -->
-	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='SwimSpeed']">
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='SwimSpeed']/@value">
 		0.72
 	</set>
-	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='SwimStrokeRate']">
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateTimid' or @name='animalTemplateHostile']/property[@name='SwimStrokeRate']/@value">
 		0.96,1.02
 	</set>
 	<!--
@@ -53,7 +52,7 @@
 	-45-55% health for non-zombie animals
 	-25-35% damage for non-zombie animals
 	-->
-	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SightRange']">
+	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SightRange']/@value">
 		30
 	</set>
 	<!-- health nerf -->
